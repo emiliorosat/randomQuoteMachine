@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,34 +25,51 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
     <style>
       .container-custom {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vmin;
       }
       #new-quote {
-        width: 100px;
-        height: 60px;
+        width: 150px;
+        height: 56px;
+      }
+      .card-custom {
+        max-width: 500px;
+        min-width: 400px;
+        padding: 15px;
+      }
+      .div-custom {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        margin: 0 20px;
       }
     </style>
     <title>FCC: Random Quote Machine</title>
   </head>
   <body>
     <div class="container-fluid container-custom">
-      <div id="quote-box" class="card">
+      <div id="quote-box" class="card card-custom">
         <p id="text" class="blockquote card-text"></p>
-        <p id="author" class="card-title"></p>
-        <div class="row p-2 align-items-center">
-          <a id="tweet-quote" href="twitter.com/intent/tweet"
+        <p id="author" class="card-title float-right"></p>
+        <div class="row p-2 div-custom">
+          <a id="tweet-quote" href="https:twitter.com/intent/tweet" target="_blank"
             ><i class="fab fa-twitter-square" style="width: 60px; height: 60px"></i
           ></a>
-          <button id="new-quote" class="btn btn-primary">btn</button>
+          <button id="new-quote" class="btn btn-info">
+            New Quote <i class="spinner-border spinner-border-sm"></i>
+          </button>
         </div>
       </div>
+      <p style="margin-top: 20px;" class="text-primary">
+          By <a href="https:emiliort.com" target="_blank" class="text-decoration-none">EmilioRT</a>
+      </p>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
